@@ -2,15 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import {map} from 'rxjs/operators';
 
-const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
 @Injectable()
 export class IconService {
 
+  
   constructor(private http:HttpClient) { }
-  icons:object[];
-  selectedIcon:object;
+  icons:any[];
+  selectedIcon:any;
   apiUrl="assets/data/icons.json";
   getIcons() {
       return this.http.get(this.apiUrl).pipe(map((response:any)=>{
@@ -18,9 +16,10 @@ export class IconService {
         return this.icons;
     }));
   }
-  getIcon(index:number){
+  getIcon(iconClass:string){
     if(this.icons){
-      this.selectedIcon=this.icons[index];
+      this.selectedIcon=this.icons.find(x => x.class === iconClass) as Object;
+      console.log(this.selectedIcon);
       return this.selectedIcon;
     }
   }

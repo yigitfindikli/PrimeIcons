@@ -19,8 +19,8 @@
   </div>
   <br>
   <div class="grid-container">
-    <div class="grid-item" *ngFor="let icon of icons| filter : searchText; let i = index " (click)="getIcon(i)">
-      <i id="iconslist"  class="{{icon.class}}"></i>
+    <div class="grid-item" *ngFor="let icon of icons| filter : searchText; let i = index " (click)="getIcon(icon.class)">
+      <i class="{{icon.class}}"></i>
     </div>
   </div>
   <div class="sticky">

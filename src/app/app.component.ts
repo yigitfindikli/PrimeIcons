@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
       this.icons=data;
     });
   }
-  getIcon(index:number){
+  getIcon(index:any){
     this.selectedIcon=this.service.getIcon(index);
     this.getIconString();
   }
@@ -28,6 +28,5 @@ export class AppComponent implements OnInit {
   }
   ngOnInit(){
   this.getIcons();
-  this.selectedIcon=this.service.getIcon(0);
   }
 }
