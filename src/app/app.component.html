@@ -23,8 +23,8 @@
     
     <br>
     <div class="grid-container" >
-      <div class="grid-item" *ngFor="let icon of icons| filter : searchText; let i = index " (click)="getIcon(icon.properties.id)" [style.backgroundColor]="icon===selectedIcon ? '#2974d4' :' #ffffff'">
-        <i id="iconslist" class="pi pi-{{icon.properties.name}}"></i>
+      <div class="grid-item" *ngFor="let icon of icons| filter : searchText; let i = index " (click)="getIcon(icon.properties.id)" [style.backgroundColor]="icon===selectedIcon ? '#2974d4' :''" >
+        <i id="iconslist" class="pi pi-{{icon.properties.name}}" [style.color]="icon===selectedIcon ? '#ffffff' :''"></i>
       </div>
     </div>
     
