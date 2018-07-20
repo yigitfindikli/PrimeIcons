@@ -1,43 +1,58 @@
-<div>
-    <ul id="list1">
-      <img src="../assets/images/logo.svg">
-      <li><a href="#designerPack">DESIGNER PACK</a></li>
-      <li><a href="#github">GITHUB</a></li>
-      <li><a href="#support">SUPPORT</a></li>
-      <li><a href="#usage">USAGE</a></li>
-    </ul>
-  </div>
-  <div class="container">
-    <h1 class="center">Beautifully crafted open source icons</h1>
-    <p class="center">Premium designed icons for use in web, iOS, Android, and desktop apps. Support for SVG and web font.
-      Completely open source, MIT licensed.</p>
-    <div id="search" class="center" >
-      <i id="searchicon" class="pi pi-search"></i>
-      <input [(ngModel)]="searchText" placeholder="Search icons...">
+<body>
+    <div>
+      <ul id="list1">
+        <img id="primeimg1" src="../assets/images/logo.svg">
+        <li><a href="#designerPack">DESIGNER PACK</a></li>
+        <li><a href="#github">GITHUB</a></li>
+        <li><a href="#support">SUPPORT</a></li>
+        <li><a href="#usage">USAGE</a></li>
+      </ul>
     </div>
-  
-  </div>
-  <br>
-  <div class="grid-container">
-    <div class="grid-item" *ngFor="let icon of icons| filter : searchText; let i = index " (click)="getIcon(icon.class)">
-      <i class="{{icon.class}}"></i>
+    
+    
+    <div class="container">
+      <h1 class="center">Beautifully crafted open source icons</h1>
+      <p class="center">Premium designed icons for use in web, iOS, Android, and desktop apps. Support for SVG and web font.
+        Completely open source, MIT licensed.</p>
+      <div id="search" class="center" >
+        <i id="searchicon" class="pi pi-search"></i>
+        <input [(ngModel)]="searchText" placeholder="Search icons...">
+      </div>
     </div>
-  </div>
-  <div class="sticky">
-    <span  *ngIf="selectedIcon" class="{{selectedIcon.class}}">
-    </span>
-    <code *ngIf="selectedIcon" >
-      {{iconCode}}
-    </code>
-  
-  </div>
-  
-  <div>
-    <ul id="list2">
-      <img src="../assets/images/logo.svg">
-      <li><a href="#designerPack">DESIGNER PACK</a></li>
-      <li><a href="#github">GITHUB</a></li>
-      <li><a href="#support">SUPPORT</a></li>
-      <li><a href="#usage">USAGE</a></li>
-    </ul>
-  </div>
+    
+    
+    <br>
+    <div class="grid-container">
+      <div class="grid-item" *ngFor="let icon of icons| filter : searchText; let i = index " (click)="getIcon(icon.properties.id)">
+        <i  id="iconslist"  class="pi pi-{{icon.properties.name}}"></i>
+      </div>
+    </div>
+    
+    <div class="sticky" *ngIf="selectedIcon">
+      <div id="leftsticky" >
+        <span>
+         {{selectedIcon.properties.name}}
+        </span>
+      </div>
+        <code  id="midcode">
+          {{iconCode}}
+        </code>
+      <div id="savebutton" >
+        <i class="pi pi-{{selectedIcon.properties.name}}"></i>
+        <i id="midline" class="pi pi-cloud-download">SVG</i>
+      </div>
+    </div>
+    
+    <div>
+      <ul id="list2">
+        <img id= "primeimg2" src="../assets/images/logo.svg">
+        <li><a href="#designerPack">DESIGNER PACK</a></li>
+        <li><a href="#github">GITHUB</a></li>
+        <li><a href="#support">SUPPORT</a></li>
+        <li><a href="#usage">USAGE</a></li>
+      </ul>
+    </div>
+    <div id="copybox">
+      <p id="copyright">Powered by PrimeTek ©2009-2018.</p>
+    </div>
+    </body>

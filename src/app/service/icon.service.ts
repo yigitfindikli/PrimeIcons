@@ -12,14 +12,13 @@ export class IconService {
   apiUrl="assets/data/icons.json";
   getIcons() {
       return this.http.get(this.apiUrl).pipe(map((response:any)=>{
-        this.icons=response.data;
+        this.icons=response.icons;
         return this.icons;
     }));
   }
-  getIcon(iconClass:string){
+  getIcon(id:any){
     if(this.icons){
-      this.selectedIcon=this.icons.find(x => x.class === iconClass) as Object;
-      console.log(this.selectedIcon);
+      this.selectedIcon=this.icons.find(x => x.properties.id === id) as Object;
       return this.selectedIcon;
     }
   }

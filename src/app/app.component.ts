@@ -17,13 +17,13 @@ export class AppComponent implements OnInit {
       this.icons=data;
     });
   }
-  getIcon(index:any){
-    this.selectedIcon=this.service.getIcon(index);
+  getIcon(id:any){
+    this.selectedIcon=this.service.getIcon(id);
     this.getIconString();
   }
   getIconString(){
     if(this.selectedIcon){
-      this.iconCode='<i class="'+this.selectedIcon.class+' "></i>';
+      this.iconCode='<i class="pi pi-'+this.selectedIcon.properties.name+'"></i>';
     }
   }
   ngOnInit(){
