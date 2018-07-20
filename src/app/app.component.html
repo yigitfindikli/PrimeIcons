@@ -24,7 +24,7 @@
     <br>
     <div class="grid-container">
       <div class="grid-item" *ngFor="let icon of icons| filter : searchText; let i = index " (click)="getIcon(icon.properties.id)">
-        <i  id="iconslist"  class="pi pi-{{icon.properties.name}}"></i>
+        <i  id="iconslist" class="pi pi-{{icon.properties.name}}"></i>
       </div>
     </div>
     

@@ -509,7 +509,7 @@
         "isMulticolor2": false,
         "grid": 0,
         "tags": [
-          "radio-on"
+          "circle-on"
         ]
       },
       "attrs": [
@@ -518,7 +518,7 @@
       "properties": {
         "order": 47,
         "id": 27,
-        "name": "radio-on",
+        "name": "circle-on",
         "prevSize": 64,
         "code": 59665
       },
@@ -538,7 +538,7 @@
         "isMulticolor2": false,
         "grid": 0,
         "tags": [
-          "radio-off"
+          "circle-off"
         ]
       },
       "attrs": [
@@ -547,7 +547,7 @@
       "properties": {
         "order": 48,
         "id": 28,
-        "name": "radio-off",
+        "name": "circle-off",
         "prevSize": 64,
         "code": 59666
       },
@@ -1026,7 +1026,7 @@
         "isMulticolor2": false,
         "grid": 0,
         "tags": [
-          "ex"
+          "exclamation-triangle"
         ]
       },
       "attrs": [
@@ -1035,7 +1035,7 @@
       "properties": {
         "order": 32,
         "id": 15,
-        "name": "ex",
+        "name": "exclamation-triangle",
         "prevSize": 64,
         "code": 59682
       },
