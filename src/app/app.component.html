@@ -22,9 +22,9 @@
     
     
     <br>
-    <div class="grid-container">
-      <div class="grid-item" *ngFor="let icon of icons| filter : searchText; let i = index " (click)="getIcon(icon.properties.id)">
-        <i  id="iconslist" class="pi pi-{{icon.properties.name}}"></i>
+    <div class="grid-container" >
+      <div class="grid-item" *ngFor="let icon of icons| filter : searchText; let i = index " (click)="getIcon(icon.properties.id)" [style.backgroundColor]="icon===selectedIcon ? '#2974d4' :' #ffffff'">
+        <i id="iconslist" class="pi pi-{{icon.properties.name}}"></i>
       </div>
     </div>
     
@@ -45,7 +45,7 @@
     
     <div>
       <ul id="list2">
-        <img id= "primeimg2" src="../assets/images/logo.svg">
+        <img id= "primeimg2" src="../assets/images/logo.png">
         <li><a href="#designerPack">DESIGNER PACK</a></li>
         <li><a href="#github">GITHUB</a></li>
         <li><a href="#support">SUPPORT</a></li>

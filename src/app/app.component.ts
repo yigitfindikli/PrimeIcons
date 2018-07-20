@@ -16,6 +16,8 @@ export class AppComponent implements OnInit {
     this.service.getIcons().subscribe((data:any)=>{
       this.icons=data;
       this.icons.splice(-1,1);
+      this.selectedIcon=this.icons[0];
+      this.getIconString();
     });
   }
   getIcon(id:any){
