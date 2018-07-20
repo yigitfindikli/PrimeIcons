@@ -1,58 +1,61 @@
 <body>
-    <div>
-      <ul id="list1">
-        <img id="primeimg1" src="../assets/images/logo.svg">
-        <li><a href="#designerPack">DESIGNER PACK</a></li>
-        <li><a href="#github">GITHUB</a></li>
-        <li><a href="#support">SUPPORT</a></li>
-        <li><a href="#usage">USAGE</a></li>
-      </ul>
-    </div>
-    
-    
-    <div class="container">
-      <h1 class="center">Beautifully crafted open source icons</h1>
-      <p class="center">Premium designed icons for use in web, iOS, Android, and desktop apps. Support for SVG and web font.
-        Completely open source, MIT licensed.</p>
-      <div id="search" class="center" >
-        <i id="searchicon" class="pi pi-search"></i>
-        <input [(ngModel)]="searchText" placeholder="Search icons...">
-      </div>
-    </div>
-    
-    
-    <br>
-    <div class="grid-container" >
-      <div class="grid-item" *ngFor="let icon of icons| filter : searchText; let i = index " (click)="getIcon(icon.properties.id)" [style.backgroundColor]="icon===selectedIcon ? '#2974d4' :''" >
-        <i id="iconslist" class="pi pi-{{icon.properties.name}}" [style.color]="icon===selectedIcon ? '#ffffff' :''"></i>
-      </div>
-    </div>
-    
-    <div class="sticky" *ngIf="selectedIcon">
-      <div id="leftsticky" >
-        <span>
-         {{selectedIcon.properties.name}}
-        </span>
-      </div>
-        <code  id="midcode">
-          {{iconCode}}
-        </code>
-      <div id="savebutton" >
-        <i class="pi pi-{{selectedIcon.properties.name}}"></i>
-        <i id="midline" class="pi pi-cloud-download">SVG</i>
-      </div>
-    </div>
-    
-    <div>
-      <ul id="list2">
-        <img id= "primeimg2" src="../assets/images/logo.png">
-        <li><a href="#designerPack">DESIGNER PACK</a></li>
-        <li><a href="#github">GITHUB</a></li>
-        <li><a href="#support">SUPPORT</a></li>
-        <li><a href="#usage">USAGE</a></li>
-      </ul>
-    </div>
-    <div id="copybox">
-      <p id="copyright">Powered by PrimeTek ©2009-2018.</p>
-    </div>
-    </body>
+        <div id="list1">
+          <div id="primeimg1">
+            <img src="../assets/images/logo-white.svg">
+          </div>
+          <ul>
+            <li><a href="#designerPack">DESIGNER PACK</a></li>
+            <li><a href="#github">GITHUB</a></li>
+            <li><a href="#support">SUPPORT</a></li>
+            <li><a href="#usage">USAGE</a></li>
+          </ul>
+        </div>
+        
+        <div class="container">
+          <h1 class="center">Beautifully crafted open source icons</h1>
+          <p class="center">Premium designed icons for use in web, iOS, Android, and desktop apps. Support for SVG and web font.
+            Completely open source, MIT licensed.</p>
+          <div id="search" class="center" >
+            <i id="searchicon" class="pi pi-search"></i>
+            <input [(ngModel)]="searchText" placeholder="Search icons...">
+          </div>
+        </div>
+        
+        
+        <br>
+        <div class="grid-container" >
+          <div class="grid-item" *ngFor="let icon of icons| filter : searchText; let i = index " (click)="getIcon(icon.properties.id)" [style.backgroundColor]="icon===selectedIcon ? '#2974d4' :''" >
+            <i id="iconslist" class="pi pi-{{icon.properties.name}}" [style.color]="icon===selectedIcon ? '#ffffff' :''"></i>
+          </div>
+        </div>
+        
+        <div class="sticky" *ngIf="selectedIcon">
+          <div id="leftsticky" >
+                <span>
+                 {{selectedIcon.properties.name}}
+                </span>
+          </div>
+          <code  id="midcode">
+            {{iconCode}}
+          </code>
+          <div id="savebutton" >
+            <i class="pi pi-{{selectedIcon.properties.name}}"></i>
+            <i id="midline" class="pi pi-cloud-download">SVG</i>
+          </div>
+        </div>
+        
+        <div id="list2">
+          <div id= "primeimg2">
+            <img  src="../assets/images/logo.png">
+          </div>
+          <ul>
+            <li><a href="#designerPack">DESIGNER PACK</a></li>
+            <li><a href="#github">GITHUB</a></li>
+            <li><a href="#support">SUPPORT</a></li>
+            <li><a href="#usage">USAGE</a></li>
+          </ul>
+        </div>
+        <div id="copybox">
+           Powered by PrimeTek ©2009-2018.
+        </div>
+        </body>
