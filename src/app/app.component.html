@@ -3,6 +3,8 @@
     <div id="list1">
       <div id="primeimg1">
         <img src="../assets/images/logo-white.svg">
+        <span id="versionnumber">1.0.10
+        </span>
       </div>
       <ul>
         <li><a href="#designerPack">DESIGNER PACK</a></li>
@@ -27,6 +29,9 @@
 
   <br>
   <div id="gridarea">
+    <div *ngIf="(icons|filter:searchText).length===0">
+    <h1>Always Bet On Prime</h1>
+     </div>
     <div class="grid-container" >
       <div class="grid-item" *ngFor="let icon of icons| filter : searchText; let i = index " (click)="getIcon(icon.properties.id)" [style.backgroundColor]="icon===selectedIcon ? '#2974d4' :''" >
         <i id="iconslist" class="pi pi-{{icon.properties.name}}" [style.color]="icon===selectedIcon ? '#ffffff' :''"></i>
@@ -46,9 +51,10 @@
     </code>
     <div id="savebutton" >
       <i class="pi pi-{{selectedIcon.properties.name}}"></i>
-      <i id="midline" class="pi pi-cloud-download">SVG</i>
+      <i id="midline" class="pi pi-save">SVG</i>
     </div>
   </div>
+
   <div id="sizefixer2">
     <div id="list2">
       <div id= "primeimg2">
