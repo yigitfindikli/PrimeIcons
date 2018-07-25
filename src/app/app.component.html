@@ -28,7 +28,7 @@
 
 
     <br>
-    <div id="gridarea" >
+    <div id="gridarea">
       <div *ngIf="(icons|filter:searchText).length===0">
         <div id="notfound">
           <h3>No results for "{{searchText}}"</h3>
@@ -36,7 +36,7 @@
             File an issue</a> and suggest a new icon.</p>
         </div>
       </div>
-      <div class="grid-container" >
+      <div class="grid-container">
         <div class="grid-item" *ngFor="let icon of icons| filter : searchText; let i = index "
              (click)="getIcon(icon.properties.id)" [style.backgroundColor]="icon===selectedIcon ? '#2974d4' :''" >
           <i id="iconslist" class="pi pi-{{icon.properties.name}}" [style.color]="icon===selectedIcon ? '#ffffff' :''"></i>
@@ -45,7 +45,7 @@
     </div>
 
 
-    <div class="sticky" *ngIf="selectedIcon">
+    <div class="sticky" [@popOverState]="stateName">
       <div id="leftsticky" >
             <span>
              {{selectedIcon.properties.name}}
