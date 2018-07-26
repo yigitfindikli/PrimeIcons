@@ -1,0 +1,377 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body{
+    background-color: #fdfdfd;
+    font-family: 'Poppins', sans-serif;
+    margin:0px;
+    height:100%;
+  }
+  
+  
+  #sizefixer{
+    background-color: #fdfdfd;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+  }
+  #list1 {
+    height: 60px;
+  }
+  
+  #primeimg1{
+  
+  }
+  #versionnumber{
+    margin-left: 3px;
+    background-color: #2a2a2a;
+    color: #bbbbbb;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 1px 5px;
+    position: relative;
+    top: -12px;
+  
+  }
+  ul{
+    list-style-type: none;
+    overflow: hidden;
+    padding-left: 0px;
+    max-width: 500px;
+    float: right;
+    padding-top: 3px;
+  }
+  li {
+    float: right;
+  }
+  li a{
+    padding-right: 34px;
+    font-size: 1em;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #838383;
+    text-decoration: none;
+  }
+  .container {
+    background: #2974d4 url("/assets/images/bg-image.jpg");
+    height: 316px;
+  
+  }
+  .center{
+    text-align: center;
+    position: relative;
+    top: 15%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    color: #ffffff;
+    max-width: 630px;
+  
+  }
+  h1.center{
+    margin-top: 0px;
+  
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  p.center{
+    font-size: 16px;
+    font-weight: normal;
+  }
+  
+  #search{
+    background-color: #ffffff;
+    color: #333333;
+    text-align: left;
+    width: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+    max-width: 500px;
+    top:18%;
+    font-size: 18px;
+  
+  }
+  input{
+    border: none;
+    height: 40px;
+    outline: none;
+    font-size: 18px;
+    width: 90%;
+  
+  
+  }
+  #searchicon{
+    padding-left: 3px ;
+  }
+  #notfound{
+    text-align: center;
+  
+  
+  }
+  
+  div.grid-item:hover {
+    background-color: #ffffff;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.16);
+    color: #000000;
+  }
+  
+  div.grid-item:active #iconslist{
+    background-color: #2974d4;
+    color: #ffffff;
+  }
+  div.grid-item:active {
+    background-color: #2974d4;
+    color: #ffffff;
+  }
+  
+  .grid-container{
+    display: grid;
+    grid-template-columns:  auto auto auto auto auto auto auto auto;
+    background-color: #fdfdfd;
+    grid-gap: 20px;
+    margin: auto;
+    max-width: 620px;
+    padding-bottom: 20px;
+    min-height: 300px;
+  
+  
+  }
+  div.grid-item {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    background-color: #fdfdfd;
+    text-align: center;
+  }
+  
+  #iconslist{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    color: #000000;
+  }
+  #iconslist:active{
+    color: #ffffff;
+  }
+  
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    padding: 5px;
+    height: 82px;
+    border-radius: 4px;
+    background-color: #323232;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+    max-width: 780px;
+    font-size: 1.2em;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin: auto;
+    text-align: center;
+    transition: all linear 0.5s;
+  }
+  #leftsticky{
+    float: left;
+    margin-left: 0.75em;
+    font-size: 0.75em;
+    position: relative;
+    top: 37%;
+  }
+  
+  #midcode{
+    padding: 5px;
+    border-radius: 4px;
+    background-color: #535353;
+    border: solid 1px #979797;
+    position: relative;
+    top: 30%;
+  }
+  
+  #savebutton{
+    position: relative;
+    top: 30%;
+    float: right;
+    padding: 1px;
+    margin-right: 0.75em;
+    background-color: #535353;
+    border-radius: 4px;
+  }
+  #midline{
+    border-left: solid 1px #979797;
+    padding-left:3px;
+    padding-right:3px;
+  }
+  
+  #sizefixer2{
+    background-color: #323232;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+    margin-top:15px;
+  
+  
+  }
+  
+  #list2 {
+    height: 60px;
+  }
+  #primeimg2{
+  }
+  
+  #copybox{
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: -moz-left;
+    font-family: Raleway, sans-serif;
+    color: #ffffff;
+    height: 48px;
+    background-color: #2a2a2a;
+    margin: 0px;
+    padding: 16px;
+    padding-left: 25px;
+    font-size: 14px;
+  
+  }
+  
+  
+  
+  @media screen and (max-width: 785px) {
+  
+    #primeimg1{
+      max-width: 200px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 20px;
+      margin-bottom: 25px;
+      margin-top: 20px;
+    }
+    #list1 {
+      height: 130px;
+      display: inline-block;
+      width: 100%;
+      margin-right: 0px;
+    }
+  
+    ul{
+      float: none;
+      text-align: center;
+      font-size: 0.75em;
+      max-width: 287px;
+      margin: auto;
+    }
+    li {
+      float: none;
+      display: inline-block;
+      text-align: center;
+    }
+    li a{
+      padding-right: 10px;
+    }
+  
+    #list2{
+      height: 130px;
+      display: inline-block;
+      width: 100%;
+      margin-right: 0px;
+    }
+  
+    #primeimg2{
+      float: none;
+      height: auto;
+      max-width: 200px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 25px;
+      margin-bottom: 25px;
+      margin-top: 20px;
+    }
+  
+  
+    .center {
+      top: 5%;
+    }
+    h1.center{
+      padding: 5px;
+    }
+  
+    p.center{
+      padding: 5px;
+    }
+  
+    #search{
+      top:5%;
+    }
+  
+    .grid-container {
+      grid-template-columns:  auto auto auto auto;
+      max-width: 300px;
+    }
+  
+    .sticky{
+      height: 100px;
+      font-size: 1em;
+      margin: 0px;
+      text-align: left;
+      margin-bottom: 0px;
+    }
+    #leftsticky{
+      float: none;
+      margin-left: 5px;
+      font-size: 1em;
+      position: static;
+      top: 0%;
+    }
+  
+    #midcode{
+      margin-top: 5px;
+      padding: 5px;
+      top: 0%;
+    }
+  
+    #savebutton{
+      position: relative;
+      top: 10%;
+      float: none;
+      max-width: 80px;
+    }
+  
+  }
+  @media screen and (min-width: 786px) {
+    #primeimg1{
+      float: left;
+      position: relative;
+      top: 25%;
+    }
+    #primeimg2{
+      float: left;
+      position: relative;
+      top: 27%;
+    }
+  
+    #gridarea{
+      min-height: 500px;
+    }
+    #list1 {
+      width: 780px;
+      position: center;
+      margin: auto;
+    }
+    #list2 {
+      width: 780px;
+      position: center;
+      margin: auto;
+    }
+  }
