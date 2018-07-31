@@ -9,13 +9,13 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   animations: [
     trigger('popOverState', [
       state('show', style({
-        opacity: 1
+        transform: 'translateY(0) scale(1)'
       })),
       state('hide',   style({
-        opacity: 0
+        transform: 'translateY(100%) scale(0)'
       })),
-      transition('show => hide', animate('300ms ease-out')),
-      transition('hide => show', animate('500ms ease-in'))
+      transition('show => hide', animate('150ms ease-out')),
+      transition('hide => show', animate('300ms ease-in'))
     ])
   ]
 })
@@ -26,7 +26,6 @@ export class AppComponent implements OnInit {
   selectedIcon: any;
   iconCode = '';
   show = false;
-  searchText:string;
   constructor(private service: IconService) {}
 
   get stateName() {
@@ -48,7 +47,7 @@ export class AppComponent implements OnInit {
   }
   getIconString() {
     if (this.selectedIcon) {
-      this.iconCode = '<i class="pi pi-' + this.selectedIcon.properties.name + '"></i>';
+      this.iconCode = this.selectedIcon.properties.name;
     }
   }
   unselectIcon() {
@@ -56,6 +55,6 @@ export class AppComponent implements OnInit {
     this.show=false;
   }
   ngOnInit() {
-  this.getIcons();
+    this.getIcons();
   }
 }

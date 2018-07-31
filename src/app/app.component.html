@@ -1,78 +1,97 @@
-<div id="sizefixer" (click)="unselectIcon()">
-    <div id="list1">
-      <div id="primeimg1">
+<div class="container">
+  <div class="sizefixer" (click)="unselectIcon()">
+    <div class="list1">
+      <div class="primeimg1">
         <img src="../assets/images/logo-white.svg">
-        <span id="versionnumber">1.0.10
+        <span class="versionnumber">1.0.10
             </span>
       </div>
       <ul>
         <li><a href="#designerPack">DESIGNER PACK</a></li>
-        <li><a href="#github">GITHUB</a></li>
+        <li><a href="https://github.com/primefaces/primeicons/">GITHUB</a></li>
         <li><a href="#support">SUPPORT</a></li>
         <li><a href="#usage">USAGE</a></li>
       </ul>
     </div>
   </div>
   
-  
-  <div class="container" (click)="unselectIcon()">
-    <h1 class="center">Beautifully crafted open source icons</h1>
-    <p class="center">Premium designed icons for use in web, iOS, Android, and desktop apps. Support for SVG and web font.
-      Completely open source, MIT licensed.</p>
-    <div id="search" class="center" >
-      <i id="searchicon" class="pi pi-search"></i>
-      <input [(ngModel)]="searchText" placeholder="Search icons...">
-    </div>
-  </div>
-  
-  
-  <br>
-  <div id="gridarea">
-    <div *ngIf="(icons|filter:searchText).length===0">
-      <div id="notfound">
-        <h3>No results for "{{searchText}}"</h3>
-        <p> Not finding an icon that you want? <a href="https://github.com/primefaces/primeicons/issues/new">
-          File an issue</a> and suggest a new icon.</p>
+  <div class="headcontainer ui-g" (click)="unselectIcon()">
+    <div class="ui-xl-4 ui-lg-3 ui-md-2 ui-sm-1"></div>
+    <div class="ui-xl-4 ui-lg-6 ui-md-8 ui-sm-10 ui-g-nopad">
+      <h1 class="headerhead">Beautifully crafted open source icons</h1>
+      <p class="headernote">Premium designed icons for use in web, iOS, Android, and desktop apps. Support for SVG and web font.
+        Completely open source, MIT licensed.</p>
+      <div class="search ui-g-12" >
+        <i  class="searchicon pi pi-search ui-g-1 ui-sm-2"></i>
+        <input class="ui-g-11 ui-sm-10" [(ngModel)]="searchText" placeholder="Search icons...">
       </div>
     </div>
-    <div class="grid-container">
-      <div class="grid-item" *ngFor="let icon of icons| filter : searchText; let i = index "
+    <div class="ui-xl-4 ui-lg-3 ui-md-2 ui-sm-1"></div>
+  </div>
+  
+  <div class="ui-g">
+    <div class="ui-xl-4 ui-lg-3 ui-md-2 ui-sm-1"></div>
+    <div class="flex-container ui-xl-4 ui-lg-6 ui-md-8 ui-sm-10 ui-g-nopad">
+      <div *ngIf="(icons|filter:searchText).length===0">
+        <div class="notfound">
+          <h3>No results for "{{searchText}}"</h3>
+          <p> Not finding an icon that you want? <a href="https://github.com/primefaces/primeicons/issues/new">
+            File an issue</a> and suggest a new icon.</p>
+        </div>
+      </div>
+      <div class="ui-g-1 iconelement" *ngFor="let icon of icons| filter : searchText; let i = index "
            (click)="getIcon(icon.properties.id)" [style.backgroundColor]="icon===selectedIcon ? '#2974d4' :''" >
-        <i id="iconslist" class="pi pi-{{icon.properties.name}}" [style.color]="icon===selectedIcon ? '#ffffff' :''"></i>
+        <i class="icons pi pi-{{icon.properties.name}}" [style.color]="icon===selectedIcon ? '#ffffff' :''"></i>
       </div>
     </div>
+    <div class="ui-xl-4 ui-lg-3 ui-md-2 ui-sm-1"></div>
   </div>
   
-  
-    <div class="sticky" [@popOverState]="stateName">
-      <div id="leftsticky" *ngIf="selectedIcon">
-              <span>
-               {{selectedIcon.properties.name}}
-              </span>
+  <div class="sticky" [@popOverState]="stateName">
+    <div class="leftsticky ui-g-3 ui-sm-12" >
+      <span>
+        {{selectedIcon.properties.name}}
+      </span>
     </div>
-    <code  id="midcode" *ngIf="selectedIcon">
-      {{iconCode}}
+    <code class="midcode ui-g-8 ui-sm-12">
+      <span>
+        &lt;
+      </span>
+      <span style="color: #f28e8e">
+        i
+      </span>
+      <span style="color: #8fbb9a">
+        class
+      </span>
+      <span>
+         ="pi pi-{{iconCode}}"&gt; &lt;/
+      </span>
+      <span style="color: #f28e8e">
+        i
+      </span>
+      <span >
+        &gt;
+      </span>
     </code>
-    <div id="savebutton" *ngIf="selectedIcon">
-      <i class="pi pi-{{selectedIcon.properties.name}}"></i>
-      <i id="midline" class="pi pi-save">SVG</i>
-    </div>
   </div>
-  <div id="footer" (click)="unselectIcon()">
-    <div id="sizefixer2" >
-      <div id="list2">
-        <div id= "primeimg2">
+  
+  <div class="footer push" (click)="unselectIcon()">
+    <div class="sizefixer2" >
+      <div class="list2">
+        <div class= "primeimg2">
           <img  src="../assets/images/logo.png">
         </div>
         <ul>
           <li><a href="#designerPack">DESIGNER PACK</a></li>
-          <li><a href="#github">GITHUB</a></li>
+          <li><a href="https://github.com/primefaces/primeicons/">GITHUB</a></li>
           <li><a href="#support">SUPPORT</a></li>
           <li><a href="#usage">USAGE</a></li>
         </ul>
       </div>
     </div>
-    <div id="copybox">
+    <div class="copybox">
       Powered by PrimeTek ©2009-2018.
     </div>
   </div>
+  </div>
+  
