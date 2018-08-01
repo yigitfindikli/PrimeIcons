@@ -47,7 +47,7 @@
     <div class="ui-xl-3 ui-lg-3 ui-md-2 ui-sm-1" (click)="unselectIcon()"></div>
   </div>
   <div class="sticky" [@popOverState]="stateName">
-    <div class="leftsticky ui-g-3 ui-sm-12">
+    <div *ngIf="selectedIcon" class="leftsticky ui-g-3 ui-sm-12">
     <span>
       {{selectedIcon.properties.name}}
     </span>
