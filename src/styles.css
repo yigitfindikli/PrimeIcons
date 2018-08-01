@@ -2,11 +2,11 @@
   box-sizing: border-box;
 }
 
-body,html{
+body, html {
   background-color: #fdfdfd;
   font-family: 'Poppins', sans-serif;
-  margin:0px;
-  height:100%;
+  margin: 0px;
+  height: 100%;
 }
 
 .ui-g {

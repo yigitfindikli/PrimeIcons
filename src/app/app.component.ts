@@ -26,6 +26,7 @@ export class AppComponent implements OnInit {
   selectedIcon: any;
   iconCode = '';
   show = false;
+  searchText:any;
   constructor(private service: IconService) {}
 
   get stateName() {

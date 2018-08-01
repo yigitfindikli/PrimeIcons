@@ -3,8 +3,9 @@
     <div class="list1">
       <div class="primeimg1">
         <img src="../assets/images/logo-white.svg">
-        <span class="versionnumber">1.0.10
-            </span>
+        <span class="versionnumber">
+          1.0.10
+          </span>
       </div>
       <ul>
         <li><a href="#designerPack">DESIGNER PACK</a></li>
@@ -14,24 +15,23 @@
       </ul>
     </div>
   </div>
-  
   <div class="headcontainer ui-g" (click)="unselectIcon()">
     <div class="ui-xl-4 ui-lg-3 ui-md-2 ui-sm-1"></div>
     <div class="ui-xl-4 ui-lg-6 ui-md-8 ui-sm-10 ui-g-nopad">
       <h1 class="headerhead">Beautifully crafted open source icons</h1>
-      <p class="headernote">Premium designed icons for use in web, iOS, Android, and desktop apps. Support for SVG and web font.
+      <p class="headernote">Premium designed icons for use in web, iOS, Android, and desktop apps. Support for SVG and
+        web font.
         Completely open source, MIT licensed.</p>
-      <div class="search ui-g-12" >
-        <i  class="searchicon pi pi-search ui-g-1 ui-sm-2"></i>
+      <div class="search ui-g-8">
+        <i class="searchicon pi pi-search ui-g-1 ui-sm-2"></i>
         <input class="ui-g-11 ui-sm-10" [(ngModel)]="searchText" placeholder="Search icons...">
       </div>
     </div>
     <div class="ui-xl-4 ui-lg-3 ui-md-2 ui-sm-1"></div>
   </div>
-  
   <div class="ui-g">
-    <div class="ui-xl-4 ui-lg-3 ui-md-2 ui-sm-1"></div>
-    <div class="flex-container ui-xl-4 ui-lg-6 ui-md-8 ui-sm-10 ui-g-nopad">
+    <div class="ui-xl-3 ui-lg-3 ui-md-2 ui-sm-1" (click)="unselectIcon()"></div>
+    <div class="flex-container ui-xl-6 ui-lg-6 ui-md-8 ui-sm-10">
       <div *ngIf="(icons|filter:searchText).length===0">
         <div class="notfound">
           <h3>No results for "{{searchText}}"</h3>
@@ -40,46 +40,44 @@
         </div>
       </div>
       <div class="ui-g-1 iconelement" *ngFor="let icon of icons| filter : searchText; let i = index "
-           (click)="getIcon(icon.properties.id)" [style.backgroundColor]="icon===selectedIcon ? '#2974d4' :''" >
+           (click)="getIcon(icon.properties.id)" [style.backgroundColor]="icon===selectedIcon ? '#2974d4' :''">
         <i class="icons pi pi-{{icon.properties.name}}" [style.color]="icon===selectedIcon ? '#ffffff' :''"></i>
       </div>
     </div>
-    <div class="ui-xl-4 ui-lg-3 ui-md-2 ui-sm-1"></div>
+    <div class="ui-xl-3 ui-lg-3 ui-md-2 ui-sm-1" (click)="unselectIcon()"></div>
   </div>
-  
   <div class="sticky" [@popOverState]="stateName">
-    <div class="leftsticky ui-g-3 ui-sm-12" >
-      <span>
-        {{selectedIcon.properties.name}}
-      </span>
+    <div class="leftsticky ui-g-3 ui-sm-12">
+    <span>
+      {{selectedIcon.properties.name}}
+    </span>
     </div>
     <code class="midcode ui-g-8 ui-sm-12">
-      <span>
-        &lt;
-      </span>
+    <span>
+      &lt;
+    </span>
       <span style="color: #f28e8e">
-        i
-      </span>
+      i
+    </span>
       <span style="color: #8fbb9a">
-        class
-      </span>
+      class
+    </span>
       <span>
-         ="pi pi-{{iconCode}}"&gt; &lt;/
-      </span>
+       ="pi pi-{{iconCode}}"&gt; &lt;/
+    </span>
       <span style="color: #f28e8e">
-        i
-      </span>
-      <span >
-        &gt;
-      </span>
+      i
+    </span>
+      <span>
+      &gt;
+    </span>
     </code>
   </div>
-  
   <div class="footer push" (click)="unselectIcon()">
-    <div class="sizefixer2" >
+    <div class="sizefixer2">
       <div class="list2">
-        <div class= "primeimg2">
-          <img  src="../assets/images/logo.png">
+        <div class="primeimg2">
+          <img src="../assets/images/logo.png">
         </div>
         <ul>
           <li><a href="#designerPack">DESIGNER PACK</a></li>
@@ -93,5 +91,4 @@
       Powered by PrimeTek ©2009-2018.
     </div>
   </div>
-  </div>
-  
+</div>

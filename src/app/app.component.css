@@ -1,12 +1,12 @@
-.container{
+.container {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -190px;
+  margin: 0 auto -108px;
   position: relative;
 }
 
-.sizefixer{
+.sizefixer {
   background-color: #fdfdfd;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
   width: 100%;
@@ -16,7 +16,7 @@
   height: 60px;
 }
 
-.versionnumber{
+.versionnumber {
   margin-left: 3px;
   background-color: #2a2a2a;
   color: #bbbbbb;
@@ -29,7 +29,7 @@
   top: -12px;
 }
 
-ul{
+ul {
   list-style-type: none;
   overflow: hidden;
   padding-left: 0px;
@@ -42,7 +42,7 @@ li {
   float: right;
 }
 
-li a{
+li a {
   padding-right: 34px;
   font-size: 1em;
   font-weight: 600;
@@ -65,7 +65,7 @@ li a{
   width: 100%;
 }
 
-.headerhead{
+.headerhead {
   font-size: 28px;
   font-weight: 600;
   font-style: normal;
@@ -80,7 +80,7 @@ li a{
   margin-bottom: 4%;
 }
 
-.headernote{
+.headernote {
   font-size: 16px;
   font-weight: normal;
   text-align: center;
@@ -90,7 +90,7 @@ li a{
   margin-bottom: 4%;
 }
 
-.search{
+.search {
   background-color: #ffffff;
   color: #333333;
   text-align: left;
@@ -103,7 +103,7 @@ li a{
   padding-right: 0;
 }
 
-input{
+input {
   border: none;
   outline: none;
   font-size: 18px;
@@ -125,14 +125,14 @@ input{
   color: #bbbbbb;
 }
 
-.searchicon{
-  padding-left: 3px ;
+.searchicon {
+  padding-left: 3px;
   font-size: 24px;
   padding-right: 0;
   padding-top: 3px;
 }
 
-.notfound{
+.notfound {
   text-align: center;
 }
 
@@ -148,14 +148,15 @@ input{
   color: #ffffff;
 }
 
-.flex-container{
+.flex-container {
   background-color: #fdfdfd;
   padding-bottom: 20px;
-  min-height: 300px;
   display: flex;
-  justify-content: space-around;
+  margin: auto;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
+
 
 .iconelement {
   width: 60px;
@@ -164,11 +165,10 @@ input{
   background-color: #fdfdfd;
   text-align: center;
   margin: 10px;
-
-  float: top;
+  float: none;
 }
 
-.icons{
+.icons {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -176,7 +176,7 @@ input{
   color: #000000;
 }
 
-.icons:active{
+.icons:active {
   color: #ffffff;
 }
 
@@ -200,9 +200,10 @@ input{
   margin: auto;
   text-align: center;
   transition: all linear 0.5s;
+  z-index: 1;
 }
 
-.leftsticky{
+.leftsticky {
   float: left;
   margin-left: 0.75em;
   font-size: 0.75em;
@@ -210,7 +211,7 @@ input{
   top: 30%;
 }
 
-.midcode{
+.midcode {
   padding: 5px;
   border-radius: 4px;
   background-color: #535353;
@@ -219,27 +220,28 @@ input{
   top: 30%;
 }
 
-.footer{
-  bottom: 0px;
+.footer {
+  bottom: 0;
   position: absolute;
   width: 100%;
 }
 
 .footer,
 .push {
-  height: 0px;
+  height: 108px;
 }
-.sizefixer2{
+
+.sizefixer2 {
   background-color: #323232;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
-  margin-top:15px;
+  margin-top: 15px;
 }
 
 .list2 {
   height: 60px;
 }
 
-.copybox{
+.copybox {
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -252,13 +254,13 @@ input{
   margin: 0;
   padding: 16px;
   font-size: 14px;
-  text-align:center;
+  text-align: center;
   text-align: -moz-center;
   text-align: -webkit-center;
 }
 
 @media screen and (max-width: 785px) {
-  .primeimg1{
+  .primeimg1 {
     max-width: 200px;
     padding-left: 20px;
     margin: 20px auto 25px;
@@ -271,7 +273,7 @@ input{
     margin-right: 0;
   }
 
-  ul{
+  ul {
     float: none;
     text-align: center;
     text-align: -moz-center;
@@ -289,18 +291,18 @@ input{
     text-align: -webkit-center;
   }
 
-  li a{
+  li a {
     padding-right: 10px;
   }
 
-  .list2{
+  .list2 {
     height: 130px;
     display: inline-block;
     width: 100%;
     margin-right: 0;
   }
 
-  .primeimg2{
+  .primeimg2 {
     float: none;
     height: auto;
     max-width: 200px;
@@ -308,7 +310,7 @@ input{
     margin: 20px auto 25px;
   }
 
-  .sticky{
+  .sticky {
     height: 100px;
     font-size: 1em;
     margin: 0;
@@ -317,7 +319,7 @@ input{
     text-align: -webkit-left;
   }
 
-  .leftsticky{
+  .leftsticky {
     text-align: center;
     text-align: -webkit-center;
     text-align: -moz-center;
@@ -329,7 +331,7 @@ input{
 
   }
 
-  .midcode{
+  .midcode {
     margin-top: 0;
     padding: 5px;
     top: 0;
@@ -341,17 +343,18 @@ input{
 }
 
 @media screen and (min-width: 786px) {
-  .primeimg1{
+  .primeimg1 {
     float: left;
     position: relative;
     top: 25%;
   }
 
-  .primeimg2{
+  .primeimg2 {
     float: left;
     position: relative;
     top: 27%;
   }
+
   .list1 {
     width: 780px;
     position: center;
