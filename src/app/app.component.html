@@ -30,15 +30,16 @@
     <div class="ui-xl-4 ui-lg-3 ui-md-2 ui-sm-1"></div>
   </div>
   <div class="ui-g">
+    <div class="ui-g-12" *ngIf="(icons|filter:searchText).length===0">
+      <div class=" ui-g-12 notfound">
+        <h3>No results for "{{searchText}}"</h3>
+        <p> Not finding an icon that you want? <a href="https://github.com/primefaces/primeicons/issues/new">
+          File an issue</a> and suggest a new icon.</p>
+      </div>
+    </div>
     <div class="ui-xl-3 ui-lg-3 ui-md-2 ui-sm-1" (click)="unselectIcon()"></div>
     <div class="flex-container ui-xl-6 ui-lg-6 ui-md-8 ui-sm-10">
-      <div *ngIf="(icons|filter:searchText).length===0">
-        <div class="notfound">
-          <h3>No results for "{{searchText}}"</h3>
-          <p> Not finding an icon that you want? <a href="https://github.com/primefaces/primeicons/issues/new">
-            File an issue</a> and suggest a new icon.</p>
-        </div>
-      </div>
+
       <div class="ui-g-1 iconelement" *ngFor="let icon of icons| filter : searchText; let i = index "
            (click)="getIcon(icon.properties.id)" [style.backgroundColor]="icon===selectedIcon ? '#2974d4' :''">
         <i class="icons pi pi-{{icon.properties.name}}" [style.color]="icon===selectedIcon ? '#ffffff' :''"></i>
@@ -46,8 +47,8 @@
     </div>
     <div class="ui-xl-3 ui-lg-3 ui-md-2 ui-sm-1" (click)="unselectIcon()"></div>
   </div>
-  <div class="sticky" [@popOverState]="stateName">
-    <div *ngIf="selectedIcon" class="leftsticky ui-g-3 ui-sm-12">
+  <div *ngIf="selectedIcon" class="leftsticky ui-g-3 ui-sm-12">
+    <div class="leftsticky ui-g-3 ui-sm-12">
     <span>
       {{selectedIcon.properties.name}}
     </span>
