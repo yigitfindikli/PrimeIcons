@@ -8,20 +8,27 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   styleUrls: ['./app.component.css'],
   animations: [
     trigger('popOverState', [
-      state('show', style({
-        transform: 'translateY(0) scale(1)'
-      })),
-      state('hide',   style({
-        transform: 'translateY(100%) scale(0)'
-      })),
-      transition('show => hide', animate('150ms ease-out')),
-      transition('hide => show', animate('300ms ease-in'))
+      state('hidden', style({
+        transform: 'translate3d(0, 25%, 0)', 
+        opacity: 0,
+        display: 'none'
+    })),
+    state('visible', style({
+        display: 'block',
+        transform: 'none', 
+        opacity: 1
+    })),
+    state('void', style({ 
+        transform: 'translate3d(0, 25%, 0) scale(0.9)', 
+        opacity: 0 
+    })),
+      transition('* => *', animate('400ms cubic-bezier(0.25, 0.8, 0.25, 1)'))
     ])
   ]
 })
 
 export class AppComponent implements OnInit {
-  title = 'app';
+  title = 'PrimeIcons';
   icons: object [];
   selectedIcon: any;
   iconCode = '';
@@ -29,33 +36,32 @@ export class AppComponent implements OnInit {
   searchText:any;
   constructor(private service: IconService) {}
 
-  get stateName() {
-    return this.show ? 'show' : 'hide'
-  }
-
-
-
   getIcons() {
     this.service.getIcons().subscribe((data: any) => {
       this.icons = data;
       this.getIconString();
     });
   }
+
   getIcon(id) {
     this.selectedIcon = this.service.getIcon(id);
     this.show=true;
     this.getIconString();
   }
+
   getIconString() {
     if (this.selectedIcon) {
       this.iconCode = this.selectedIcon.properties.name;
     }
   }
+
   unselectIcon() {
-    this.selectedIcon = null;
+    this.selectedIcon=null;
     this.show=false;
   }
+
   ngOnInit() {
     this.getIcons();
   }
+  
 }
