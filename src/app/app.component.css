@@ -134,6 +134,8 @@ input {
 
 .notfound {
   text-align: center;
+  margin: auto;
+  width: 100%;
 }
 
 .iconelement:hover {
@@ -148,16 +150,14 @@ input {
   color: #ffffff;
 }
 
-.flex-container {
+.grid-container {
   background-color: #fdfdfd;
   padding-bottom: 20px;
-  display: flex;
-  margin: auto;
+  display:flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  max-width: 660px;
+  margin: auto;
 }
-
-
 .iconelement {
   width: 60px;
   height: 60px;
@@ -166,6 +166,7 @@ input {
   text-align: center;
   margin: 10px;
   float: none;
+  color: #000000;
 }
 
 .icons {
@@ -173,12 +174,8 @@ input {
   top: 50%;
   transform: translateY(-50%);
   font-size: 2em;
-  color: #000000;
 }
 
-.icons:active {
-  color: #ffffff;
-}
 
 .sticky {
   position: -webkit-sticky;
@@ -199,16 +196,15 @@ input {
   color: #ffffff;
   margin: auto;
   text-align: center;
-  transition: all linear 0.5s;
   z-index: 1;
 }
 
 .leftsticky {
   float: left;
-  margin-left: 0.75em;
+  margin-left: 12%;
   font-size: 0.75em;
   position: relative;
-  top: 30%;
+  top: 36%;
 }
 
 .midcode {
@@ -218,6 +214,8 @@ input {
   border: solid 1px #979797;
   position: relative;
   top: 30%;
+  float: right;
+  margin-right: 12%;
 }
 
 .footer {
@@ -259,7 +257,7 @@ input {
   text-align: -webkit-center;
 }
 
-@media screen and (max-width: 785px) {
+@media screen and (max-width: 795px) {
   .primeimg1 {
     max-width: 200px;
     padding-left: 20px;
@@ -295,19 +293,8 @@ input {
     padding-right: 10px;
   }
 
-  .list2 {
-    height: 130px;
-    display: inline-block;
-    width: 100%;
-    margin-right: 0;
-  }
-
-  .primeimg2 {
-    float: none;
-    height: auto;
-    max-width: 200px;
-    padding-left: 33px;
-    margin: 20px auto 25px;
+  .grid-container{
+    max-width: 340px;
   }
 
   .sticky {
@@ -325,28 +312,53 @@ input {
     text-align: -moz-center;
     margin-left: 0;
     font-size: 1em;
-    position: static;
-    top: 0;
-    margin-top: 1%;
-
+    width: 100%;
+    top: 8px;
+    float: none;
+    margin-bottom: 20px;
   }
 
   .midcode {
-    margin-top: 0;
-    padding: 5px;
-    top: 0;
     text-align: center;
     text-align: -webkit-center;
     text-align: -moz-center;
+    width: 100%;
+    margin: auto;
+    top: 0;
+
+
+  }
+
+  .list2 {
+    height: 130px;
+    display: inline-block;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .primeimg2 {
+    float: none;
+    height: auto;
+    max-width: 200px;
+    padding-left: 33px;
+    margin: 20px auto 25px;
   }
 
 }
 
-@media screen and (min-width: 786px) {
+@media screen and (max-width: 430px) {
+  .grid-container{
+    max-width: 260px;
+  }
+}
+
+
+@media screen and (min-width: 795px) {
   .primeimg1 {
     float: left;
     position: relative;
     top: 25%;
+    margin-left: 1%;
   }
 
   .primeimg2 {
